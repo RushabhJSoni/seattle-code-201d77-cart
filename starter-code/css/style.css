@@ -1,1 +1,46 @@
+
 /* TODO: Make it awesome */
+html{
+  display:flex;
+  justify-content: center;
+  background-color: rgb(122, 118, 60);
+}
+body{
+  text-align: center;
+  max-width:1000px;
+  margin:auto 0;
+}
+header{
+  display:flex;
+  justify-content: space-between;
+  height:100px;
+  background-color: bisque;
+}
+header h1{
+  margin-left:250px;
+  font-size:xx-large;
+  font-style:italic;
+  font-weight:bold;
+}
+ul{
+  display:flex;
+  margin-right:250px;
+  }
+
+  ul li{
+    margin-left:100px;
+  }
+  main{
+    background-color: rgb(212, 199, 124);
+  }
+  main header h1{
+    font-size:large;
+  }
+  a{
+    text-decoration: none;
+    font-size:large;
+  }
+  main header{
+    height:50px;
+    background-color: rgba(255, 228, 196, 0.418);
+  }

@@ -2,13 +2,15 @@
 
 // Cart constructor.
 const Cart = function(items) {
-  // this.items is an array of CartItem instances.
+  // this.items is an array of CartItem instances
   this.items = items;
 };
+// console.log(Cart);
 
 Cart.prototype.addItem = function(product, quantity) {
   // DONE: Fill in this instance method to create a new CartItem and add it to this.items
   let newItem = new CartItem(product,quantity);
+  console.log(newItem);
   this.items.push(newItem);
 };
 
@@ -22,13 +24,12 @@ Cart.prototype.addItem = function(product, quantity) {
 //   /// ----------------- try googling splice ------------- ///
 // };
 
-
-
 const CartItem = function(product, quantity) {
   this.product = product;
   this.quantity = quantity;
-  
 };
+
+
 
 // Product contructor.
 const Product = function(filePath, name) {
@@ -37,7 +38,6 @@ const Product = function(filePath, name) {
   Product.allProducts.push(this);
 };
 Product.allProducts = [];
-
 
 function generateCatalog() {
   new Product('assets/bag.jpg', 'Bag');

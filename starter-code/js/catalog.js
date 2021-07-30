@@ -4,6 +4,7 @@
 
 // Set up an empty cart for use on this page.
 const cart = new Cart([]);
+// console.log(cart);
 /// ----------------------------- cart is and instance of a CART -------------------////
 /// ------------------- use cmd/ctl f to look for words in your code ------------------///
 
@@ -31,27 +32,33 @@ function handleSubmit(event) {
   // DONE: Prevent the page from reloading
   /// --------------- at this point you know which item was picked from the list, how many ----------- ///
   // Do all the things ...
-  const name = event.target.querySelector('option').label;
+  const product = event.target.querySelector('option').label;
 
   const quantity = parseInt(event.target.quantity.value);
-  console.log(name, quantity);
-
-
-  addSelectedItemToCart();
-  cart.saveToLocalStorage();
-  updateCounter();
-  updateCartPreview();
+  console.log(product, quantity);
+  
+  
+  
+  
+  addSelectedItemToCart(product,quantity);
+  // cart.saveToLocalStorage();
+  // updateCounter();
+  // updateCartPreview();
 
 }
 
 // TODO: Add the selected item and quantity to the cart
-function addSelectedItemToCart(product,quantity) {
-  let newCart = new Cart(product,quantity);
-  newCart.addItem();
+function addSelectedItemToCart(product , quantity) {
+  
+  // new CartItem(product,quantity);
+  let newCartItem = new Cart (items);
+  newCartItem.addItem(product,quantity);
+  
 
-  // TODO: suss out the item picked from the select list
-  // TODO: get the quantity
-  // TODO: using those, add one item to the Cart
+  
+  
+  
+  
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
